@@ -1,7 +1,7 @@
 (ns hello-world.core)
 
 (def message "Hello, World! 👋")
-(def root (.getElementById js/document "root"))
+(def root (js/document.getElementById "root"))
 
-(println message)
-(.log js/console message)
+(println (str "REPL: " message))
+(.log js/console (str "Browser: " message))
